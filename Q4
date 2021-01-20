@@ -1,0 +1,36 @@
+package loveBabbar;
+
+import java.util.Scanner;
+
+public class Q1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int no_of_zeroes = 0;
+		int no_of_ones = 0;
+		int no_of_twos = 0;
+		int A[] = new int[N];
+		for (int i = 0; i < N; i++) {
+			A[i] = sc.nextInt();
+		}
+		for (int i = 0; i < N; i++) {
+			if (A[i] == 0) {
+				no_of_zeroes += 1;
+			} else if (A[i] == 1) {
+				no_of_ones += 1;
+			} else if (A[i] == 2) {
+				no_of_twos += 1;
+			}
+		}
+		for (int i = 0; i < no_of_zeroes; i++) {
+			System.out.print(0 + " ");
+		}
+		for (int i = 0; i < no_of_ones; i++) {
+			System.out.print(1 + " ");
+		}
+		for (int i = 0; i < no_of_twos; i++) {
+			System.out.print(2 + " ");
+		}
+	}
+}
