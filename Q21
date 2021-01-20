@@ -1,0 +1,32 @@
+package loveBabbar;
+
+import java.util.Set;
+
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Q1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		Set<Integer> a = new HashSet<>();
+
+		boolean flag = false;
+		int sum = 0;
+
+		for (int i = 0; i < N; i++) {
+			a.add(sum);
+			sum += sc.nextInt();
+			if (a.contains(sum)) {
+				flag = true;
+				break;
+			}
+		}
+		if (flag == true) {
+			System.out.println("Yes");
+		} else {
+			System.out.println("No");
+		}
+	}
+}
