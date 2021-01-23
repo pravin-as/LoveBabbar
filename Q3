@@ -1,0 +1,30 @@
+package project;
+
+import java.util.Scanner;
+
+import java.util.Arrays;
+
+public class Apple {
+
+	public static void main(String[] args) {
+
+		try {
+			Scanner sc = new Scanner(System.in);
+			int T = sc.nextInt();
+			while (T > 0) {
+				int n = sc.nextInt();
+				int arr[] = new int[n];
+				for (int i = 0; i < n; i++) {
+					arr[i] = sc.nextInt();
+
+				}
+				Arrays.sort(arr);
+				int K = sc.nextInt();
+				System.out.println(arr[K - 1]);
+				T--;
+			}
+		} catch (Exception e) {
+			return;
+		}
+	}
+}
