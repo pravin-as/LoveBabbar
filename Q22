@@ -1,0 +1,31 @@
+package project;
+
+import java.math.BigInteger;
+
+import java.util.Scanner;
+
+public class Pineapple {
+
+	public static void main(String[] args) {
+		try {
+			Scanner sc = new Scanner(System.in);
+			int T = sc.nextInt();
+			BigInteger a = new BigInteger("1");
+
+			while (T > 0) {
+				long N = sc.nextLong();
+				for (long i = N; i > 0; i--) {
+					a = a.multiply(BigInteger.valueOf(i));
+				}
+
+				System.out.println(a);
+
+				T--;
+			}
+
+		} catch (Exception e) {
+			return;
+		}
+
+	}
+}
