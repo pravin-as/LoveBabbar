@@ -1,0 +1,51 @@
+package loveBabbar;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
+public class Q1 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int M = sc.nextInt();
+		int N = sc.nextInt();
+
+		int A[] = new int[M];
+		for (int i = 0; i < M; i++) {
+			A[i] = sc.nextInt();
+		}
+
+		int B[] = new int[N];
+		for (int i = 0; i < N; i++) {
+			B[i] = sc.nextInt();
+		}
+
+		List<Integer> P = new ArrayList<>();
+		for (int i = 0; i < M; i++) {
+			P.add(A[i]);
+		}
+		for (int i = 0; i < N; i++) {
+			P.add(B[i]);
+		}
+
+		Object C[] = P.toArray();
+		Arrays.sort(C);
+
+		int length = C.length;
+		Integer D[] = new Integer[length];
+
+		System.arraycopy(C, 0, D, 0, length);
+
+		System.out.print("The median is ");
+
+		if ((M + N) % 2 == 0) {
+			System.out.println((D[(M + N) / 2 - 1] + D[(M + N) / 2]) / 2);
+		} else {
+			System.out.println(D[(M + N) / 2]);
+		}
+	}
+}
